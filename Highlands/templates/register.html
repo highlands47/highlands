@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!DOCTYPE html>
+<html>
+<link href='styles.css' rel='stylesheet'>
+<head>
+<title>login</title>
+
+
+</head>
+
+<body>
+
+<header>HIGHLANDS UNDERGRADUATES COLLEGE</header>
+
+	<form id="firstForm" action="" method="POST">
+        {{ form.hidden_tag() }}
+	<h1>SIGN UP</h1>
+
+		<label for="firstName">First Name: </label>
+		    {{ form.first_name }}
+		<label for="Surname">Surname: </label>
+		    {{ form.surname }}
+		<label for="email">Email: </label>
+		    {{ form.email }}
+	    <label for="password">Password: </label>
+		    {{ form.password }}
+        <label for="confirmpassword">Confirm Password: </label>
+		    {{ form.confirm_password }}
+
+		<div class="nxtbtn">
+           {{ form.submit }}
+        </div>
+
+	</form>
+    <div class="registered">
+        <small class="text-muted">
+            Already have an Account? <a class="ml-2" href="{{ url_for('log_in') }}">Log In</a>
+        </small>
+    </div>
+
+</body>
+{% endblock %}
