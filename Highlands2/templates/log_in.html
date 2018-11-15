@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+
+<script src="jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+function check_info(){
+let userName = document.getElementById('userName').value;
+let password = document.getElementById('password').value;
+if(userName =="" || password==""){
+   alert('Please fill all fields');
+   return false;
+} else{ return true}}
+</script>
+</head>
+
+<body>
+
+<header id="mainHeader">HIGHLANDS UNDERGRADUATE COLLEGE</header>
+
+	<form id="form1" action="home.html" method="post" onsubmit="return check_info();">
+	<h1>LOG IN</h1>
+
+		<label for="userName">UserName: </label>
+		<input type="text" id="userName" name="userName" placeholder="Name">
+		<label for="SecondName">Password: </label>
+		<input type="text" id="password" name="password" placeholder="******">
+
+
+
+		<input class="nxtbtn" type="submit" value="LOG IN">
+
+	</form>
+	<link href='styles.css' rel='stylesheet'>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!DOCTYPE html>
+<html>
+<link href='styles.css' rel='stylesheet'>
+<head>
+<title>login</title>
+
+
+</head>
+
+<body>
+
+<header>HIGHLANDS UNDERGRADUATES COLLEDGE</header>
+
+	<form id="firstForm" action="from2.html" method="post">
+	<h1>SIGN UP</h1>
+
+		<label for="firstName">FirstName: </label>
+		<input type="text" id="firstName" name="fullName">
+		<label for="Surname">Surname: </label>
+		<input type="text" id="Surname" name="fullName">
+		<label for="mail">Email: </label>
+		<input type="mail" id="mail" name="email">
+	    <label for="password">Password: </label>
+		<input type="text" id="password" name="password">
+        <label for="confirmpassword">ConfirmPassword: </label>
+		<input type="text" id="confirmpassword" name="confirmpassword">
+
+		<input class="nxtbtn" type="submit" value="SUBMIT">
+
+
+	</form>
+
+</body>
+{% endblock %}

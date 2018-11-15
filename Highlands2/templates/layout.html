@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+ <div class="main-header">
+	  <ul>
+		<li><a href="/home">Home</a></li>
+		<li><a href="/log_in">Login</a></li>
+		<li><a href="/about">About</a></li>
+		<li><a href="/register">Registration</a></li>
+	 </ul>
+ </div>
+     {% if title %}
+        <title>HIGHLANDS UNDERGRADUATE COLLEGE - {{ title }}</title>
+    {% else %}
+        <title>HIGHLANDS UNDERGRADUATE COLLEGE</title>
+    {% endif %}
+</head>
+<body>
+<div id="container">
+    {% block content %}{% endblock content %}
+</div>
+</body>
+</html>

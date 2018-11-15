@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for course in courses %}
+        <h1>{{ course.topic }}</h1>
+        <p> {{ course.duration }} starting on {{ course.course_date }}</p>
+        <p> {{ courses.price }}</p>
+    {% endfor %}
+{% endblock %}
+
+
